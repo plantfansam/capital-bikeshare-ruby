@@ -14,14 +14,14 @@ module CapitalBikeshare
 
     def fetch
       @station_data = Net::HTTP.get(URI(@xml_feed_url))
-      @station_set = StationSet.new(parse_stations)
+      @station_set = StationSet.new(parsed_stations)
     end
 
     def station_xml_document
       REXML::Document.new(@station_data)
     end
 
-    def parse_stations
+    def parsed_stations
       station_elements = station_xml_document.elements.first.elements
       station_elements.map { |station| Station.new(station) }
     end
