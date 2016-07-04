@@ -1,1 +1,1 @@
-require_relative "../lib/capital_bikeshare"
+require_relative "../lib/capital-bikeshare"
