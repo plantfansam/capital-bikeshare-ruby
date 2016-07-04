@@ -1,2 +1,1 @@
-require_relative "../lib/capital-bikeshare"
-require "byebug"
+require_relative "../lib/capital_bikeshare"
