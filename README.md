@@ -1,6 +1,6 @@
 # ruby-capital-bikeshare
 
-Wrapper for Capital Bikeshare station data (get the data [here](https://www.capitalbikeshare.com/data/stations/bikeStations.xml)).
+Wrapper for Capital Bikeshare station data (get the data [here](https://www.capitalbikeshare.com/data/stations/bikeStations.xml)). A work in progress!
 
 ## Usage
 
