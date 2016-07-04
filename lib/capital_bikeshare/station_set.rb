@@ -4,8 +4,8 @@ module CapitalBikeshare
       @stations = stations
     end
 
-    def add(station)
-      @stations.push(station)
+    def to_a
+      @stations.to_a
     end
   end
 end
