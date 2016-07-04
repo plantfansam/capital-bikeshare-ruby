@@ -6,7 +6,11 @@ Gem::Specification.new do |s|
   s.description = "Get data about station status etc"
   s.authors     = ["llleafyyy"]
   s.email       = "llleafyyy@gmail.com"
-  s.files       = Dir["lib/capital_bikeshare/**/*"]
+  s.files       = ["lib/capital-bikeshare.rb",
+                    "lib/capital_bikeshare/client.rb",
+                    "lib/capital_bikeshare/helpers.rb",
+                    "lib/capital_bikeshare/station.rb",
+                    "lib/capital_bikeshare/station_set.rb"]
   s.homepage    = 'http://rubygems.org/gems/capital-bikeshare'
   s.license     = 'MIT'
 end
