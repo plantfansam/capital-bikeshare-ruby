@@ -1,4 +1,4 @@
-# ruby-capital-bikeshare
+# capital-bikeshare gem :bike: :rainbow: :us:
 
 Wrapper for Capital Bikeshare station data (get the data [here](https://www.capitalbikeshare.com/data/stations/bikeStations.xml)). A work in progress!
 
