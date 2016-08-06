@@ -1,4 +1,4 @@
-# capital-bikeshare gem :bike: :rainbow: :us:
+# :bike::gem::us::bike::gem::us::bike::gem::us: capital-bikeshare gem :bike::gem::us::bike::gem::us::bike::gem::us:
 
 Wrapper for Capital Bikeshare station data (get the data [here](https://www.capitalbikeshare.com/data/stations/bikeStations.xml)). A work in progress!
 
