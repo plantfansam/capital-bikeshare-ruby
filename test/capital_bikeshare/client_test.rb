@@ -8,7 +8,7 @@ class TestCapitalBikeshareClient < Minitest::Test
         File.dirname(__FILE__), "../fixtures/station_feed.xml"))).read
 
   def setup
-    @client = ::CapitalBikeshare::Client.new
+    @client = ::CapitalBikeshare.client
   end
 
   def test_fetch

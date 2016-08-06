@@ -4,7 +4,7 @@ module CapitalBikeshare
     require "rexml/document"
 
     XML_FEED_URL =
-      "https://www.capitalbikeshare.com/data/stations/bikeStations.xml"
+      "https://feeds.capitalbikeshare.com/stations/stations.xml"
 
     def initialize(xml_feed_url = XML_FEED_URL)
       @xml_feed_url = xml_feed_url

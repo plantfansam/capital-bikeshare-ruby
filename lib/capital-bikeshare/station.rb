@@ -24,6 +24,8 @@ module CapitalBikeshare
       case station_attrs
       when REXML::Element
         initialize_from_xml(station_attrs)
+      when Hash
+        initialize_from_hash(station_attrs)
       end
     end
 
@@ -35,6 +37,10 @@ module CapitalBikeshare
         send("#{attribute_name}=", coerced_value)
       end
       self
+    end
+
+    def initialize_from_hash(station_attrs)
+      station_attrs.each { |key, value| send "#{key}=", value }
     end
 
     def self.coerce_field_value(field_name, field_value)
