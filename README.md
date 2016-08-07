@@ -23,7 +23,7 @@ Then you'll be able to use all of the methods described below.
 ### Listing Stations
 ```
 > CapitalBikeshare.stations.class
-=> Array # of station objects
+=> Array
 > CapitalBikeshare.stations.first
 => #<CapitalBikeshare::Station:0x007fd7ae8728b8 @id=1,
 @name="Eads St & 15th St S",
