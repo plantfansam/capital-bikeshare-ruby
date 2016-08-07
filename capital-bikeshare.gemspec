@@ -1,4 +1,4 @@
-require File.join(__FILE__, "../lib/capital-bikeshare/version")
+require File.expand_path("../lib/capital-bikeshare/version", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = 'capital-bikeshare'
@@ -9,10 +9,10 @@ Gem::Specification.new do |s|
   s.authors     = ["llleafyyy"]
   s.email       = "llleafyyy@gmail.com"
   s.files       = ["lib/capital-bikeshare.rb",
-                    "lib/capital_bikeshare/client.rb",
-                    "lib/capital_bikeshare/helpers.rb",
-                    "lib/capital_bikeshare/station.rb",
-                    "lib/capital_bikeshare/station_set.rb"]
+                    "lib/capital-bikeshare/client.rb",
+                    "lib/capital-bikeshare/helpers.rb",
+                    "lib/capital-bikeshare/station.rb",
+                    "lib/capital-bikeshare/station_set.rb"]
   s.homepage    = 'http://rubygems.org/gems/capital-bikeshare'
   s.license     = 'MIT'
 end
