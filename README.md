@@ -9,10 +9,19 @@ Wrapper for Capital Bikeshare station data (get the data [here](https://feeds.ca
 
 ### Initializing the client
 
-The client grabs the station feed whenever `CapitalBikeshare` is interpeted so you can easily do things like `CapitalBikeshare.stations`. Repeated instantiations of the module will re-grab the station feed, so careful about doing 10000.times { CapitalBikeshare.stations }.
+The client grabs the station feed whenever `CapitalBikeshare` is interpeted so you can easily do things like `CapitalBikeshare.stations`. Repeated instantiations of the module will re-grab the station feed, so careful about doing `10000.times { CapitalBikeshare.stations }`.
+
+For more control over when the client grabs XML, you can do:
+
+```ruby
+client = CapitalBikeshare::Client.new
+client.fetch
+```
+
+Then you'll be able to use all of the methods described below.
 
 ### Listing Stations
-```ruby
+```
 > CapitalBikeshare.stations.class
 => Array # of station objects
 > CapitalBikeshare.stations.first
@@ -37,7 +46,7 @@ The client grabs the station feed whenever `CapitalBikeshare` is interpeted so y
 
 Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/stations.xml); each station also has a name attribute. You can use `CapitalBikeshare.find` to find a particular station (under the hood, this method will delegate to `find_by_name` or `find_by_id` based on the argument's class).
 
-```ruby
+```
 > CapitalBikeshare.find(1)
 => #<CapitalBikeshare::Station:0x007fce32faa958 @id=1,
 @name="Eads St & 15th St S",
@@ -56,7 +65,7 @@ Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/
 @latest_update_time=#<DateTime: 2016-08-07T09:02:21+00:00((2457608j,32541s,0n),+0s,2299161j)>>
 ```
 
-```ruby
+```
 > CapitalBikeshare.find("18th & Eads St.")
 => #<CapitalBikeshare::Station:0x007fce32fa0e80 @id=2,
 @name="18th & Eads St.",
