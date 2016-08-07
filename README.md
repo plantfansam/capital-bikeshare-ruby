@@ -97,7 +97,7 @@ This gem makes each station's XML attributes available in Rubyrific `snake_case`
 :last_comm_with_server,
 :install_date,
 :removal_date,
-latest_update_time,
+:latest_update_time,
 :installed,
 :locked,
 :temporary,
