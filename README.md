@@ -9,22 +9,18 @@ Wrapper for Capital Bikeshare station data (get the data [here](https://feeds.ca
 
 ### Initializing the client
 
-The client grabs the station feed whenever `CapitalBikeshare` is interpeted so you can easily do things like `CapitalBikeshare.stations`. Repeated instantiations of the module will re-grab the station feed, so careful about doing `10000.times { CapitalBikeshare.stations }`.
-
-For more control over when the client grabs XML, you can do:
-
 ```ruby
 client = CapitalBikeshare::Client.new
-client.fetch
+client.fetch # gets station data
 ```
 
 Then you'll be able to use all of the methods described below.
 
 ### Listing Stations
 ```
-> CapitalBikeshare.stations.class
+> client.stations.class
 => Array
-> CapitalBikeshare.stations.first
+> client.stations.first
 => #<CapitalBikeshare::Station:0x007fd7ae8728b8 @id=1,
 @name="Eads St & 15th St S",
 @terminal_name=31000,
@@ -44,10 +40,10 @@ Then you'll be able to use all of the methods described below.
 
 ### Finding Stations
 
-Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/stations.xml); each station also has a name attribute. You can use `CapitalBikeshare.find` to find a particular station (under the hood, this method will delegate to `find_by_name` or `find_by_id` based on the argument's class).
+Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/stations.xml); each station also has a name attribute. You can use `client.find` to find a particular station (under the hood, this method will delegate to `find_by_name` or `find_by_id` based on the argument's class).
 
 ```
-> CapitalBikeshare.find(1)
+> client.find(1)
 => #<CapitalBikeshare::Station:0x007fce32faa958 @id=1,
 @name="Eads St & 15th St S",
 @terminal_name=31000,
@@ -66,7 +62,7 @@ Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/
 ```
 
 ```
-> CapitalBikeshare.find("18th & Eads St.")
+> client.find("18th & Eads St.")
 => #<CapitalBikeshare::Station:0x007fce32fa0e80 @id=2,
 @name="18th & Eads St.",
 @terminal_name=31001,
