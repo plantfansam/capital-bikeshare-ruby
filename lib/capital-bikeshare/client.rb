@@ -29,5 +29,9 @@ module CapitalBikeshare
     def stations
       @station_set.to_a
     end
+
+    def find(searchable)
+      @station_set.find(searchable)
+    end
   end
 end
