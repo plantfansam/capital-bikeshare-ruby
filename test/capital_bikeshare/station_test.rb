@@ -1,6 +1,5 @@
 require_relative "../test_helper"
 require "minitest/autorun"
-require "byebug"
 
 class TestCapitalBikeshareStation < Minitest::Test
   def setup
