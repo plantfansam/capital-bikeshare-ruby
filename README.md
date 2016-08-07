@@ -1,6 +1,6 @@
 # :bike::gem::us::bike::gem::us::bike::gem::us: capital-bikeshare gem :bike::gem::us::bike::gem::us::bike::gem::us:
 
-Wrapper for Capital Bikeshare station data (get the data [here](https://www.capitalbikeshare.com/data/stations/bikeStations.xml)).
+Wrapper for Capital Bikeshare station data (get the data [here](https://feeds.capitalbikeshare.com/stations/stations.xml)).
 
 ## Usage
 
@@ -35,8 +35,7 @@ The client grabs the station feed whenever `CapitalBikeshare` is interpeted so y
 
 ### Finding Stations
 
-Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/stations.xml); each station also has a name attribute. You can use `CapitalBikeshare.find` to find a particular station (under the hood, 
-this method will delegate to `find_by_name` or `find_by_id` based on the argument class).
+Each station has an ID in the [XML](https://feeds.capitalbikeshare.com/stations/stations.xml); each station also has a name attribute. You can use `CapitalBikeshare.find` to find a particular station (under the hood, this method will delegate to `find_by_name` or `find_by_id` based on the argument's class).
 
 ```ruby
 > CapitalBikeshare.find(1)
@@ -55,7 +54,7 @@ this method will delegate to `find_by_name` or `find_by_id` based on the argumen
 @nb_bikes=4,
 @nb_empty_docks=10,
 @latest_update_time=#<DateTime: 2016-08-07T09:02:21+00:00((2457608j,32541s,0n),+0s,2299161j)>>
-``` 
+```
 
 ```ruby
 > CapitalBikeshare.find("18th & Eads St.")
